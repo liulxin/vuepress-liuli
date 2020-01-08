@@ -1,13 +1,20 @@
 <template>
   <div class="theme-container">
-    <Content/>
+    <Navbar />
   </div>
 </template>
 
 <script>
+import Navbar from "@theme/components/Navbar.vue";
 export default {
+  name: "Layout",
+
+  components: {
+    Navbar
+  },
+
   mounted() {
-    console.log(this.$site)
+    console.log(Navbar)
   }
-}
+};
 </script>
