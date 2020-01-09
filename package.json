@@ -2,19 +2,29 @@
   "name": "vuepress-theme-liuli",
   "version": "1.1.0",
   "description": "A simple and beautiful vuepress Blog & Doc theme",
-  "main": "index.js",
+  "keywords": [
+    "vuepress",
+    "vue",
+    "theme"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liulxin/vuepress-theme-liuli.git"
   },
+  "license": "MIT",
+  "author": {
+    "name": "liulixin",
+    "email": "dong550293874@163.com"
+  },
+  "main": "index.js",
   "scripts": {
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
     "example:build": "vuepress build example --temp example/.temp",
     "example:dev": "vuepress dev example --temp example/.temp",
-    "version": "npm run example:build && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "lint": "eslint . --ext .js,.vue",
-    "test": "npm run lint && jest"
+    "test": "npm run lint && jest",
+    "version": "npm run example:build && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "husky": {
     "hooks": {
@@ -31,16 +41,6 @@
       "git add"
     ]
   },
-  "keywords": [
-    "vuepress",
-    "vue",
-    "theme"
-  ],
-  "author": {
-    "name": "liulixin",
-    "email": "dong550293874@163.com"
-  },
-  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^10.0.3",
@@ -50,6 +50,7 @@
     "eslint-config-sherry": "0.0.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.1.2",
+    "husky": "^4.0.3",
     "lint-staged": "^9.5.0",
     "sort-package-json": "^1.38.0",
     "vuepress": "^1.2.0"
