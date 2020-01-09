@@ -1,5 +1,4 @@
-module.exports = (options, ctx) => {
-  console.log(ctx)
+module.exports = (themeConfig, ctx) => {
   return {
     
   }

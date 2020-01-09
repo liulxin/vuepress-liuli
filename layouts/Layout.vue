@@ -5,16 +5,16 @@
 </template>
 
 <script>
-import Navbar from "@theme/components/Navbar.vue";
+import Navbar from '@theme/components/Navbar.vue'
 export default {
-  name: "Layout",
+  name: 'Layout',
 
   components: {
-    Navbar
+    Navbar,
   },
 
   mounted() {
     console.log(Navbar)
-  }
-};
+  },
+}
 </script>

@@ -7,7 +7,29 @@
     "type": "git",
     "url": "git+https://github.com/liulxin/vuepress-theme-liuli.git"
   },
-  "scripts": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "package.json": [
+      "sort-package-json",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
+    "example:build": "vuepress build example --temp example/.temp",
+    "example:dev": "vuepress dev example --temp example/.temp",
+    "version": "npm run example:build && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "lint": "eslint . --ext .js,.vue"
+  },
   "keywords": [
     "vuepress",
     "vue",
@@ -17,8 +39,19 @@
     "name": "liulixin",
     "email": "dong550293874@163.com"
   },
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.19.0"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "conventional-changelog-cli": "^2.0.31",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-sherry": "0.0.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "husky": "^4.0.1",
+    "lint-staged": "^9.5.0",
+    "sort-package-json": "^1.38.0",
+    "vuepress": "^1.2.0"
   }
 }
