@@ -50,7 +50,6 @@
     "eslint-config-sherry": "0.0.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.1.2",
-    "husky": "^4.0.1",
     "lint-staged": "^9.5.0",
     "sort-package-json": "^1.38.0",
     "vuepress": "^1.2.0"
