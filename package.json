@@ -7,6 +7,14 @@
     "type": "git",
     "url": "git+https://github.com/liulxin/vuepress-theme-liuli.git"
   },
+  "scripts": {
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
+    "example:build": "vuepress build example --temp example/.temp",
+    "example:dev": "vuepress dev example --temp example/.temp",
+    "version": "npm run example:build && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "lint": "eslint . --ext .js,.vue"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -21,14 +29,6 @@
       "sort-package-json",
       "git add"
     ]
-  },
-  "scripts": {
-    "docs:build": "vuepress build docs",
-    "docs:dev": "vuepress dev docs",
-    "example:build": "vuepress build example --temp example/.temp",
-    "example:dev": "vuepress dev example --temp example/.temp",
-    "version": "npm run example:build && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "lint": "eslint . --ext .js,.vue"
   },
   "keywords": [
     "vuepress",
