@@ -13,7 +13,8 @@
     "example:build": "vuepress build example --temp example/.temp",
     "example:dev": "vuepress dev example --temp example/.temp",
     "version": "npm run example:build && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "lint": "eslint . --ext .js,.vue"
+    "lint": "eslint . --ext .js,.vue",
+    "precommit": "lint-staged"
   },
   "husky": {
     "hooks": {
@@ -53,5 +54,8 @@
     "lint-staged": "^9.5.0",
     "sort-package-json": "^1.38.0",
     "vuepress": "^1.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
