@@ -13,7 +13,7 @@
     "example:build": "vuepress build example --temp example/.temp",
     "example:dev": "vuepress dev example --temp example/.temp",
     "version": "npm run example:build && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "lint": "eslint . --ext .js,.vue",
+    "lint": "eslint . --ext .js,.vue"
   },
   "husky": {
     "hooks": {
