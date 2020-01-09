@@ -14,7 +14,6 @@
     "example:dev": "vuepress dev example --temp example/.temp",
     "version": "npm run example:build && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "lint": "eslint . --ext .js,.vue",
-    "precommit": "lint-staged"
   },
   "husky": {
     "hooks": {
