@@ -47,11 +47,11 @@
     "conventional-changelog-cli": "^2.0.31",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
-    "eslint-config-sherry": "0.0.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.1.2",
     "husky": "^4.0.3",
     "lint-staged": "^9.5.0",
+    "prettier": "1.19.1",
     "sort-package-json": "^1.38.0",
     "vuepress": "^1.2.0"
   },
