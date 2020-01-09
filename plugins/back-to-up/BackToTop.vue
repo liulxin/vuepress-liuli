@@ -1,12 +1,12 @@
 <template>
   <transition name="fade">
     <svg
+      v-if="show"
       t="1578469873257"
       class="go-to-top"
       viewBox="0 0 1024 1024"
       xmlns="http//www.w3.org/2000/svg"
       p-id="5071"
-      v-if="show"
       @click="scrollToTop"
     >
       <path
@@ -24,29 +24,29 @@
 </template>
 
 <script>
-import debounce from "lodash.debounce"
+import debounce from 'lodash.debounce'
 export default {
-  name:"BackToTop",
+  name: 'BackToTop',
   props: {
     threshold: {
       type: Number,
-      default: 300
-    }
+      default: 300,
+    },
   },
   data() {
     return {
-      scrollTop: null
+      scrollTop: null,
     }
   },
-  computed:{
+  computed: {
     show() {
       return this.scrollTop > this.threshold
-    }
+    },
   },
   mounted() {
     this.scrollTop = this.getScrollTop()
     window.addEventListener(
-      "scroll",
+      'scroll',
       debounce(() => {
         this.scrollTop = this.getScrollTop()
       }, 100)
@@ -62,10 +62,10 @@ export default {
       )
     },
     scrollToTop() {
-      window.scrollTo({ top:0, behavior:"smooth" })
+      window.scrollTo({ top: 0, behavior: 'smooth' })
       this.scrollTop = 0
-    }
-  }
+    },
+  },
 }
 </script>
 

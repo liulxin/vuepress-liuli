@@ -41,7 +41,17 @@
       "git add"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "@vuepress/plugin-blog": "^1.7.1",
+    "@vuepress/plugin-nprogress": "^1.2.0",
+    "@vuepress/plugin-pwa": "^1.2.0",
+    "@vuepress/plugin-search": "^1.2.0",
+    "dayjs": "^1.8.19",
+    "lodash.debounce": "^4.0.8",
+    "remove-markdown": "^0.3.0",
+    "vue-feather-icons": "^5.0.0",
+    "vuepress-plugin-live2d": "0.0.7"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "conventional-changelog-cli": "^2.0.31",
